@@ -31,6 +31,12 @@
   .window-body { background: #f4f4f0; }
   .window-body p, .window-body li, .window-body td { color: #1a1a1a; }
   .title-bar-text { font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 13px; }
+  /* 98 픽셀 폰트 무효화: 한글 깨짐 방지. 크기·테두리는 98 유지 */
+  .window, .title-bar, .title-bar-text, table, th, td, button {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+  }
+  table, th, td { font-size: 14px; }
   /* 98 창·표·대화 */
   .window { margin-bottom: 48px; }
   table { width: 100%; border-collapse: collapse; margin: 0; font-size: 14px; background: #fff; }
