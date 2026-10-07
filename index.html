@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ai-room — 다중 모델 대화 운영 실험 기록</title>
+<link rel="stylesheet" href="https://unpkg.com/98.css" />
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: "IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace; background: #ffffff; color: #171717; font-size: 15px; line-height: 1.65; }
@@ -30,6 +31,16 @@
   pre .lang { display: block; font-size: 12px; color: #737373; margin-bottom: 8px; }
   code { background: #f6f6f4; padding: 1px 5px; font-size: 14px; }
   a { color: #1a56db; }
+  /* 98 부분적용: 창 느낌은 대화 상자·표에만 둔다. 한글 본문은 기존 모노 유지 */
+  body, p, h1, h2, th, td, figcaption, .meta, .chat .row {
+    font-family: "IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1 { font-size: clamp(1.875rem, 3.5vw, 2.75rem); }
+  h2 { font-size: 1.25rem; }
+  table { background: #fff; box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080; }
+  th { background: #dfdfdf; }
+  .chat { background: #fff; box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080; }
   .dot { display: inline-block; width: 14px; height: 14px; border-radius: 50%; vertical-align: -2px; margin-right: 6px; }
   .chat { border: 1px solid #e2e2df; margin: 16px 0; }
   .chat .row { padding: 10px 14px; border-bottom: 1px solid #e2e2df; }
